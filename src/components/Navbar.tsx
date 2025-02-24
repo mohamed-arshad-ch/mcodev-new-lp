@@ -93,10 +93,12 @@ const Navbar = () => {
               >
                 Creator Mind
               </a>
-              
+
                 </div>
               )}
             </div>
+
+
             <Link 
               to="/contact" 
               className={`font-medium transition-colors ${
@@ -139,7 +141,51 @@ const Navbar = () => {
               >
                 Services
               </Link>
+
+              <div className="relative">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center text-gray-600 font-medium hover:text-primary transition-colors"
+              >
+                Products
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {isDropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 animate-fade-down">
+                  <a 
+                    href="https://www.ezzycartz.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="block px-4 py-2 text-gray-600 hover:bg-gray-50"
+                  >
+                    Ezzy Cartz
+                  </a>
+
+                  <a 
+                href="https://www.hostmycv.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Host My CV
+              </a>
               <a 
+                href="https://meta.mcodevbytes.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Creator Mind
+              </a>
+
+                </div>
+              )}
+            </div>
+
+
+              {/* <a 
                 href="https://www.ezzycartz.com/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -165,7 +211,7 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Creator Mind
-              </a>
+              </a> */}
               <Link 
                 to="/contact" 
                 className={`px-4 py-2 font-medium transition-colors ${
