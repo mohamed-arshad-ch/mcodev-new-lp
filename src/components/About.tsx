@@ -4,7 +4,7 @@ import { Building2, Command, LineChart } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 text-center mb-16">
           <h2 className="text-primary font-medium">Why MCODEV Bytes?</h2>

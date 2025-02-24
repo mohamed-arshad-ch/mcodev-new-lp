@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Hero = () => {
+
+  const handleWhatsAppClick = () => {
+    window.open(`https://wa.me/919847274569`, '_blank');
+  };
   return (
     <div className="relative overflow-hidden pt-32 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,13 +32,15 @@ const Hero = () => {
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Button 
+              <a 
+                href="#about"
                 className="bg-primary hover:bg-primary-hover text-white px-6 py-2 sm:px-8 sm:py-6 text-base sm:text-lg transition-all duration-200 w-full sm:w-auto"
               >
                 Explore Plans
-              </Button>
+              </a>
               <Button 
                 variant="outline" 
+                onClick={handleWhatsAppClick}
                 className="px-6 py-2 sm:px-8 sm:py-6 text-base sm:text-lg border-primary text-primary hover:bg-primary/5 w-full sm:w-auto"
               >
                 Contact Us
