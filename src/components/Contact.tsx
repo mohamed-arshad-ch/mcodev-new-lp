@@ -27,7 +27,7 @@ const Contact = () => {
                   <MapPin className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#494D7C] mb-2">Address</h3>
-                <p className="text-gray-600">Ranchi, Jharkhand, India</p>
+                <p className="text-gray-600">Kerala, India</p>
               </div>
             </div>
 
