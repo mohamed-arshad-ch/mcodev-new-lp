@@ -74,6 +74,26 @@ const Navbar = () => {
                   >
                     Ezzy Cartz
                   </a>
+
+                  <a 
+                href="https://www.hostmycv.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Host My CV
+              </a>
+              <a 
+                href="https://meta.mcodevbytes.in/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Creator Mind
+              </a>
+              
                 </div>
               )}
             </div>
