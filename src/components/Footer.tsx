@@ -10,8 +10,8 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-[#494D7C]">MCODEV</h3>
             <div className="space-y-2">
-              <p className="text-gray-600">Kerala</p>
-              <p className="text-gray-600">India</p>
+              <p className="text-gray-600">Kerala, India</p>
+             
               <p className="text-gray-600">
                 <span className="font-semibold">Phone:</span> +91-98472-74569
               </p>
