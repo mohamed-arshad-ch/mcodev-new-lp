@@ -114,7 +114,7 @@ const ServicesPage = () => {
         "@type": "Service",
         "name": service.title,
         "description": service.description,
-        "url": `https://mcodevbytes.in/services/${service.slug}`
+        "url": `https://www.mcodevbytes.in/services/${service.slug}`
       }
     }))
   };
@@ -125,7 +125,8 @@ const ServicesPage = () => {
         title="Our Services - Web Development, App Development & Digital Marketing"
         description="Explore MCODEV Bytes' comprehensive range of digital services including web development, app development, digital marketing, and more. Transform your business with our expertise."
         keywords="web development, app development, digital marketing, SEO services, cloud solutions, IT services Kerala,India"
-        canonical="https://mcodevbytes.in/services"
+        ogImage="https://www.mcodevbytes.in/mcodev-logo-1.png"
+        canonical="https://www.mcodevbytes.in/services"
       />
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}

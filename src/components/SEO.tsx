@@ -13,11 +13,11 @@ const SEO = ({
   title, 
   description, 
   keywords, 
-  ogImage = "https://mcodevbytes.in/mcodev-logo-1.png",
+  ogImage = "https://www.mcodevbytes.in/mcodev-logo-1.png",
   ogType = "website",
   canonical
 }: SEOProps) => {
-  const siteUrl = "https://mcodevbytes.in";
+  const siteUrl = "https://www.mcodevbytes.in";
 
   return (
     <Helmet>

@@ -12,7 +12,7 @@ const products = [
     slug: "ezzy-cartz",
     name: "Ezzy Cartz",
     description: "A comprehensive e-commerce solution for modern businesses",
-    image: "/ezzy-cart-logo.png",
+    image: "https://www.mcodevbytes.in/ezzy-cart-logo.png",
     features: [
       "Easily create and customize your online store without coding.",
       "Smart AI suggests relevant products based on customer preferences.",
@@ -34,7 +34,7 @@ const products = [
     slug: "host-my-cv",
     name: "Host My CV",
     description: "Professional online resume hosting and management platform",
-    image: "/host-my-cv-logo.png",
+    image: "https://www.mcodevbytes.in/host-my-cv-logo.png",
     features: [
       "Create and host your professional CV with a unique link.",
       "Choose from a variety of stylish and professional CV designs.",
@@ -56,7 +56,7 @@ const products = [
     slug: "creator-mind",
     name: "Creator Mind",
     description: "All-in-one platform for content creators and digital artists",
-    image: "/creator-mind-logo.png",
+    image: "https://www.mcodevbytes.in/creator-mind-logo.png",
     features: [
       "Get AI-driven suggestions for content, designs, or business ideas.",
       "Built-in tools for image, video, and text editing with smart enhancements.",
@@ -114,7 +114,7 @@ const ProductDetail = () => {
       }
     },
     "image": product.image,
-    "url": `https://mcodevbytes.in/products/${product.slug}`
+    "url": `https://www.mcodevbytes.in/products/${product.slug}`
   };
 
   return (
@@ -124,7 +124,7 @@ const ProductDetail = () => {
         description={product.description}
         keywords={`${product.name}, MCODEV Bytes, web application, digital solution`}
         ogImage={product.image}
-        canonical={`https://mcodevbytes.in/products/${product.slug}`}
+        canonical={`https://www.mcodevbytes.in/products/${product.slug}`}
       />
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}

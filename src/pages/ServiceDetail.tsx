@@ -38,7 +38,7 @@ const ServiceDetail = () => {
     "provider": {
       "@type": "Organization",
       "name": "MCODEV Bytes",
-      "url": "https://mcodevbytes.in"
+      "url": "https://www.mcodevbytes.in"
     }
   };
 
@@ -48,7 +48,7 @@ const ServiceDetail = () => {
         title={`${service.title} Services - MCODEV Bytes`}
         description={service.longDescription}
         keywords={`${service.title.toLowerCase()}, MCODEV Bytes services, IT services Kerala,India`}
-        canonical={`https://mcodevbytes.in/services/${service.slug}`}
+        canonical={`https://www.mcodevbytes.in/services/${service.slug}`}
       />
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}

@@ -48,7 +48,7 @@ const Index = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content="https://www.mcodevbytes.in/" />
         <meta property="og:title" content="Mcodev Bytes | Innovative Software Development & Digital Solutions" />
         <meta 
           property="og:description" 
@@ -58,16 +58,16 @@ const Index = () => {
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:url" content="https://www.mcodevbytes.in/" />
         <meta property="twitter:title" content="Mcodev Bytes | Leading Software Development Company" />
         <meta 
           property="twitter:description" 
           content="Mcodev Bytes delivers cutting-edge software development, web solutions, and digital services. Expert tech solutions for modern businesses." 
         />
-        <meta property="twitter:image" content="/mcodev-logo-1.png.jpg" />
+        <meta property="twitter:image" content="/mcodev-logo-1.png" />
 
         {/* Additional SEO tags */}
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href="https://www.mcodevbytes.in/" />
         <meta name="robots" content="index, follow" />
         
         {/* Structured Data for Mcodev Bytes */}
@@ -77,8 +77,8 @@ const Index = () => {
             "@type": "SoftwareCompany",
             "name": "Mcodev Bytes",
             "alternateName": "Mcodev",
-            "url": window.location.href,
-            "logo": "/mcodev-logo.png",
+            "url": "https://www.mcodevbytes.in/",
+            "logo": "https://www.mcodevbytes.in/mcodev-logo-1.png",
             "telephone": "+919847274569",
             "description": "Mcodev Bytes is a leading software development company specializing in custom software solutions, web development, and digital services.",
             "address": {
