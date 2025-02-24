@@ -22,9 +22,9 @@ const AboutPage = () => {
   return (
     <>
       <SEO 
-        title="About Us - Leading Web Development Company in Ranchi"
-        description="MCODEV Bytes is a leading web development and digital solutions company in Ranchi, Jharkhand. With 150+ successful projects and 100+ satisfied clients, we deliver innovative digital solutions."
-        keywords="web development company ranchi, digital solutions ranchi, MCODEV Bytes, IT company jharkhand"
+        title="About Us - Leading Web Development Company in Kerala,India"
+        description="MCODEV Bytes is a leading web development and digital solutions company in Kerala, India. With 150+ successful projects and 100+ satisfied clients, we deliver innovative digital solutions."
+        keywords="web development company Kerala,India, digital solutions Kerala, MCODEV Bytes, IT company India"
         canonical="https://mcodevbytes.in/about"
       />
       <div className="min-h-screen bg-white">

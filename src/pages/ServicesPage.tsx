@@ -124,7 +124,7 @@ const ServicesPage = () => {
       <SEO 
         title="Our Services - Web Development, App Development & Digital Marketing"
         description="Explore MCODEV Bytes' comprehensive range of digital services including web development, app development, digital marketing, and more. Transform your business with our expertise."
-        keywords="web development, app development, digital marketing, SEO services, cloud solutions, IT services ranchi"
+        keywords="web development, app development, digital marketing, SEO services, cloud solutions, IT services Kerala,India"
         canonical="https://mcodevbytes.in/services"
       />
       <script type="application/ld+json">

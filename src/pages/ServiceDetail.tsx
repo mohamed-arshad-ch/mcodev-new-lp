@@ -47,7 +47,7 @@ const ServiceDetail = () => {
       <SEO 
         title={`${service.title} Services - MCODEV Bytes`}
         description={service.longDescription}
-        keywords={`${service.title.toLowerCase()}, MCODEV Bytes services, IT services ranchi`}
+        keywords={`${service.title.toLowerCase()}, MCODEV Bytes services, IT services Kerala,India`}
         canonical={`https://mcodevbytes.in/services/${service.slug}`}
       />
       <script type="application/ld+json">
