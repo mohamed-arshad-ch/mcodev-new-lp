@@ -12,7 +12,7 @@ const products = [
     slug: "ezzy-cartz",
     name: "Ezzy Cartz",
     description: "A comprehensive e-commerce solution for modern businesses",
-    image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
+    image: "/ezzy-cart-logo.png",
     features: [
       "Easily create and customize your online store without coding.",
       "Smart AI suggests relevant products based on customer preferences.",
@@ -34,7 +34,7 @@ const products = [
     slug: "host-my-cv",
     name: "Host My CV",
     description: "Professional online resume hosting and management platform",
-    image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
+    image: "/host-my-cv-logo.png",
     features: [
       "Create and host your professional CV with a unique link.",
       "Choose from a variety of stylish and professional CV designs.",
@@ -56,7 +56,7 @@ const products = [
     slug: "creator-mind",
     name: "Creator Mind",
     description: "All-in-one platform for content creators and digital artists",
-    image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
+    image: "/creator-mind-logo.png",
     features: [
       "Get AI-driven suggestions for content, designs, or business ideas.",
       "Built-in tools for image, video, and text editing with smart enhancements.",
@@ -101,6 +101,13 @@ const ProductDetail = () => {
     "@type": "Product",
     "name": product.name,
     "description": product.description,
+    "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4,
+          "bestRating": 5
+        },
     "image": product.image,
     "url": `https://mcodevbytes.in/products/${product.slug}`
   };
