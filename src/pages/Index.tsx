@@ -54,7 +54,7 @@ const Index = () => {
           property="og:description" 
           content="Mcodev Bytes delivers cutting-edge software development, web solutions, and digital services. Expert tech solutions for modern businesses." 
         />
-        <meta property="og:image" content="/mcodev-logo-1.png" />
+        <meta property="og:image" content="https://www.mcodevbytes.in/mcodev-logo-1.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -64,7 +64,7 @@ const Index = () => {
           property="twitter:description" 
           content="Mcodev Bytes delivers cutting-edge software development, web solutions, and digital services. Expert tech solutions for modern businesses." 
         />
-        <meta property="twitter:image" content="/mcodev-logo-1.png" />
+        <meta property="twitter:image" content="https://www.mcodevbytes.in/mcodev-logo-1.png" />
 
         {/* Additional SEO tags */}
         <link rel="canonical" href="https://www.mcodevbytes.in/" />
