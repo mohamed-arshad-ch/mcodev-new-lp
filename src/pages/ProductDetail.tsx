@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -6,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import Loader from "@/components/Loader";
+import SEO from "@/components/SEO";
 
 const products = [
   {
@@ -96,69 +96,90 @@ const ProductDetail = () => {
 
   if (loading) return <Loader />;
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.description,
+    "image": product.image,
+    "url": `https://mcodevbytes.in/products/${product.slug}`
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <div className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-up">
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
-                {product.name}
-              </h1>
-              <p className="text-lg text-gray-600">
-                {product.description}
-              </p>
-              <div className="space-y-6">
-                <h2 className="text-2xl font-semibold text-gray-800">Key Features</h2>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-600">
-                      <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+    <>
+      <SEO 
+        title={`${product.name} - MCODEV Bytes Products`}
+        description={product.description}
+        keywords={`${product.name}, MCODEV Bytes, web application, digital solution`}
+        ogImage={product.image}
+        canonical={`https://mcodevbytes.in/products/${product.slug}`}
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <div className="pt-24 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8 animate-fade-up">
+                <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
+                  {product.name}
+                </h1>
+                <p className="text-lg text-gray-600">
+                  {product.description}
+                </p>
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-semibold text-gray-800">Key Features</h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {product.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-600">
+                        <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-semibold text-gray-800">Benefits</h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {product.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center text-gray-600">
+                        <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90 text-white"
+                    onClick={() => window.open(product.demoUrl, '_blank')}
+                  >
+                    View Demo
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/5"
+                    onClick={() => navigate('/contact')}
+                  >
+                    Contact Sales
+                  </Button>
+                </div>
               </div>
-              <div className="space-y-6">
-                <h2 className="text-2xl font-semibold text-gray-800">Benefits</h2>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {product.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center text-gray-600">
-                      <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+              <div className="relative lg:ml-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto object-contain rounded-lg shadow-lg"
+                />
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="bg-primary hover:bg-primary/90 text-white"
-                  onClick={() => window.open(product.demoUrl, '_blank')}
-                >
-                  View Demo
-                </Button>
-                <Button 
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary/5"
-                  onClick={() => navigate('/contact')}
-                >
-                  Contact Sales
-                </Button>
-              </div>
-            </div>
-            <div className="relative lg:ml-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-auto object-contain rounded-lg shadow-lg"
-              />
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

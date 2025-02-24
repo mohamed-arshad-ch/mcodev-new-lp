@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -15,6 +14,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 export const services = [
   {
@@ -104,54 +104,80 @@ const ServicesPage = () => {
 
   if (loading) return <Loader />;
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "url": `https://mcodevbytes.in/services/${service.slug}`
+      }
+    }))
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4">
-            <h1 className="text-5xl font-bold text-[#494D7C]">Our Services</h1>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Explore our comprehensive range of digital services designed to help your business grow
-            </p>
+    <>
+      <SEO 
+        title="Our Services - Web Development, App Development & Digital Marketing"
+        description="Explore MCODEV Bytes' comprehensive range of digital services including web development, app development, digital marketing, and more. Transform your business with our expertise."
+        keywords="web development, app development, digital marketing, SEO services, cloud solutions, IT services ranchi"
+        canonical="https://mcodevbytes.in/services"
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        
+        {/* Hero Section */}
+        <section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-4">
+              <h1 className="text-5xl font-bold text-[#494D7C]">Our Services</h1>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                Explore our comprehensive range of digital services designed to help your business grow
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={index}
-                to={`/services/${service.slug}`}
-                className="bg-white p-8 rounded-lg border-2 border-[#7E69AB] hover:shadow-lg transition-all duration-300 group animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className={`w-20 h-20 rounded-lg bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-primary/5 transition-colors ${service.color}`}>
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[#494D7C] mb-4 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {service.description}
-                </p>
-                <div className="flex items-center text-primary font-medium">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </div>
-              </Link>
-            ))}
+        {/* Services Grid */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  to={`/services/${service.slug}`}
+                  className="bg-white p-8 rounded-lg border-2 border-[#7E69AB] hover:shadow-lg transition-all duration-300 group animate-fade-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className={`w-20 h-20 rounded-lg bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-primary/5 transition-colors ${service.color}`}>
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#494D7C] mb-4 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    {service.description}
+                  </p>
+                  <div className="flex items-center text-primary font-medium">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
