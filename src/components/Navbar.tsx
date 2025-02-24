@@ -1,12 +1,34 @@
 
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, ShoppingCart, FileText, Palette } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const location = useLocation();
+
+  const products = [
+    {
+      name: "Ezzy Cartz",
+      slug: "ezzy-cartz",
+      url: "/products/ezzy-cartz",
+      icon: <ShoppingCart className="w-4 h-4 mr-2" />
+    },
+    {
+      name: "Host My CV",
+      slug: "host-my-cv",
+      url: "/products/host-my-cv",
+      icon: <FileText className="w-4 h-4 mr-2" />
+    },
+    {
+      name: "Creator Mind",
+      slug: "creator-mind",
+      url: "/products/creator-mind",
+      icon: <Palette className="w-4 h-4 mr-2" />
+    }
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
@@ -66,39 +88,20 @@ const Navbar = () => {
               </button>
               {isDropdownOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 animate-fade-down">
-                  <a 
-                    href="https://www.ezzycartz.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block px-4 py-2 text-gray-600 hover:bg-gray-50"
-                  >
-                    Ezzy Cartz
-                  </a>
-
-                  <a 
-                href="https://www.hostmycv.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Host My CV
-              </a>
-              <a 
-                href="https://meta.mcodevbytes.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Creator Mind
-              </a>
-
+                  {products.map((product) => (
+                    <Link 
+                      key={product.slug}
+                      to={product.url}
+                      className="block px-4 py-2 text-gray-600 hover:bg-gray-50 flex items-center"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {product.icon}
+                      {product.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
-
-
             <Link 
               to="/contact" 
               className={`font-medium transition-colors ${
@@ -141,77 +144,34 @@ const Navbar = () => {
               >
                 Services
               </Link>
-
-              <div className="relative">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center text-gray-600 font-medium hover:text-primary transition-colors"
-              >
-                Products
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {isDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 animate-fade-down">
-                  <a 
-                    href="https://www.ezzycartz.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block px-4 py-2 text-gray-600 hover:bg-gray-50"
-                  >
-                    Ezzy Cartz
-                  </a>
-
-                  <a 
-                href="https://www.hostmycv.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Host My CV
-              </a>
-              <a 
-                href="https://meta.mcodevbytes.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Creator Mind
-              </a>
-
-                </div>
-              )}
-            </div>
-
-
-              {/* <a 
-                href="https://www.ezzycartz.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Ezzy Cartz
-              </a>
-              <a 
-                href="https://www.hostmycv.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Host My CV
-              </a>
-              <a 
-                href="https://meta.mcodevbytes.in/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-4 py-2 font-medium text-gray-600 hover:text-primary hover:bg-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Creator Mind
-              </a> */}
+              {/* Mobile Products Dropdown */}
+              <div className="px-4 py-2">
+                <button
+                  onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                  className="w-full flex items-center justify-between font-medium text-gray-600 hover:text-primary"
+                >
+                  Products
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isMobileProductsOpen && (
+                  <div className="mt-2 pl-4 space-y-2 border-l-2 border-gray-100">
+                    {products.map((product) => (
+                      <Link 
+                        key={product.slug}
+                        to={product.url}
+                        className="block py-2 text-gray-600 hover:text-primary flex items-center"
+                        onClick={() => {
+                          setIsMobileProductsOpen(false);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        {product.icon}
+                        {product.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               <Link 
                 to="/contact" 
                 className={`px-4 py-2 font-medium transition-colors ${
