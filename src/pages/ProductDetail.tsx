@@ -102,12 +102,13 @@ const ProductDetail = () => {
     "name": product.name,
     "description": product.description,
     "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 4,
-          "bestRating": 5
-        },
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 4,
+        "bestRating": 5
+      },
+    },
     "image": product.image,
     "url": `https://mcodevbytes.in/products/${product.slug}`
   };
