@@ -32,12 +32,13 @@ const Hero = () => {
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <a 
-                href="#about"
+             <a href="#services">
+             <Button 
                 className="bg-primary hover:bg-primary-hover text-white px-6 py-2 sm:px-8 sm:py-6 text-base sm:text-lg transition-all duration-200 w-full sm:w-auto"
               >
-                Explore Plans
-              </a>
+                Explore Services
+              </Button>
+             </a>
               <Button 
                 variant="outline" 
                 onClick={handleWhatsAppClick}
