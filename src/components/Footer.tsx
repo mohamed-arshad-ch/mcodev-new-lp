@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-[#494D7C]">MCODEV</h3>
             <div className="space-y-2">
-              <p className="text-gray-600">Ranchi, Jharkhand</p>
+              <p className="text-gray-600">Kerala</p>
               <p className="text-gray-600">India</p>
               <p className="text-gray-600">
                 <span className="font-semibold">Phone:</span> +91-98472-74569
@@ -71,10 +71,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-4">
               {[
-                { Icon: Twitter, href: "#" },
-                { Icon: Facebook, href: "#" },
-                { Icon: Instagram, href: "#" },
-                { Icon: Linkedin, href: "#" },
+                { Icon: Twitter, href: "https://x.com/MCODEVBYTES" },
+                { Icon: Facebook, href: "https://www.facebook.com/mcodevbytes" },
+                { Icon: Instagram, href: "https://www.instagram.com/mcodev_bytes/" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/mcodev-bytes" },
               ].map(({ Icon, href }, index) => (
                 <a
                   key={index}

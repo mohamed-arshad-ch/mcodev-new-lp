@@ -86,9 +86,10 @@ const Index = () => {
               "addressCountry": "IN"
             },
             "sameAs": [
-              "https://www.linkedin.com/company/mcodev-bytes",
-              "https://twitter.com/mcodevbytes",
-              "https://facebook.com/mcodevbytes"
+              "https://x.com/MCODEVBYTES",
+              "https://www.facebook.com/mcodevbytes",
+              "https://www.instagram.com/mcodev_bytes/",
+              "https://www.linkedin.com/company/mcodev-bytes"
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
