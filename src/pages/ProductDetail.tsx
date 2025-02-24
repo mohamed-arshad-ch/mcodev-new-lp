@@ -108,6 +108,10 @@ const ProductDetail = () => {
         "ratingValue": 4,
         "bestRating": 5
       },
+      "author": {
+        "@type": "Company",
+        "name": "MCODEV Bytes"
+      }
     },
     "image": product.image,
     "url": `https://mcodevbytes.in/products/${product.slug}`
