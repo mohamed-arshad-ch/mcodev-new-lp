@@ -14,19 +14,20 @@ const products = [
     description: "A comprehensive e-commerce solution for modern businesses",
     image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
     features: [
-      "Easy product management",
-      "Secure payment integration",
-      "Responsive design",
-      "Inventory tracking",
-      "Analytics dashboard",
-      "Customer management"
+      "Easily create and customize your online store without coding.",
+      "Smart AI suggests relevant products based on customer preferences.",
+      "Accept payments through multiple options (UPI, credit/debit cards, wallets, etc.).",
+      "Customers and sellers can track orders live from purchase to delivery.",
+      "Optimized for mobile devices with a quick checkout process."
+     
     ],
     demoUrl: "https://www.ezzycartz.com/",
     benefits: [
-      "Increase online sales",
-      "Streamline operations",
-      "Enhance customer experience",
-      "Real-time inventory management"
+      " Get your business online quickly, saving time and money on development.",
+      "Boosts sales by offering a personalized shopping experience.",
+      "Increases customer convenience, leading to higher conversions.",
+      "Enhances trust and transparency, improving customer satisfaction.",
+      "Reduces cart abandonment, ensuring a smooth shopping experience."
     ]
   },
   {
@@ -35,19 +36,20 @@ const products = [
     description: "Professional online resume hosting and management platform",
     image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
     features: [
-      "Custom domain support",
-      "Multiple resume versions",
-      "Professional templates",
-      "Analytics tracking",
-      "SEO optimization",
-      "Mobile responsive"
+      "Create and host your professional CV with a unique link.",
+      "Choose from a variety of stylish and professional CV designs.",
+      "Edit and update your CV in real-time.",
+      "Your CV gets an SEO-friendly URL for better visibility.",
+      "See who viewed and interacted with your CV."
+    
     ],
-    demoUrl: "https://hostmycv.com/",
+    demoUrl: "https://www.hostmycv.in/",
     benefits: [
-      "Stand out to employers",
-      "Track application views",
-      "Easy updates and management",
-      "Professional online presence"
+      "Share your resume easily with recruiters and employers anytime, anywhere.",
+      "Make a great first impression with a resume that stands out.",
+      "No need to resend PDFs—your latest version is always online.",
+      "Increase your chances of being discovered by recruiters through search engines.",
+      "Get insights into recruiter interest and follow up effectively."
     ]
   },
   {
@@ -56,19 +58,19 @@ const products = [
     description: "All-in-one platform for content creators and digital artists",
     image: "/lovable-uploads/d739a119-2ac7-4758-b006-9d9ed0c84e89.png",
     features: [
-      "Project management",
-      "Content scheduling",
-      "Collaboration tools",
-      "Analytics dashboard",
-      "Asset management",
-      "Revenue tracking"
+      "Get AI-driven suggestions for content, designs, or business ideas.",
+      "Built-in tools for image, video, and text editing with smart enhancements.",
+      "Connect, share, and collaborate with other creators in real time.",
+      " Integrated analytics, branding, and monetization features.",
+      "Directly publish content to social media, blogs, and websites."
     ],
-    demoUrl: "https://creatormind.com/",
+    demoUrl: "https://meta.mcodevbytes.in/",
     benefits: [
-      "Streamline content creation",
-      "Improve collaboration",
-      "Track performance metrics",
-      "Manage multiple platforms"
+      "Saves time and helps creators overcome creative blocks effortlessly.",
+      "Makes professional-level content creation quick and easy.",
+      "Expand your network, get feedback, and grow your creative influence.",
+      "Helps creators turn their passion into a profitable business.",
+      "Saves time and ensures a wider reach with just one click."
     ]
   }
 ];
