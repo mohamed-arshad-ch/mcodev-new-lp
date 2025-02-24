@@ -42,7 +42,7 @@ const Index = () => {
       <OurServices />
       <Services />
       <Features />
-      <Team />
+      {/* <Team /> */}
       <Pricing />
       <FAQ />
       <Contact />
